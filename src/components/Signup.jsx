@@ -1,12 +1,15 @@
 import React from "react";
 import {useState} from "react"
 import axios from "axios"
+import {useNavigate} from "react-router-dom"
+
 
 
 
 
 const Create = () => {
 
+  const navigate = useNavigate()
 
 
   const [signUp,setSignUp] = useState({
@@ -24,6 +27,8 @@ const Create = () => {
       if(res.data.status == "Success") {
 
         alert("Signup Completed")
+
+        navigate("/")
 
         
       }
