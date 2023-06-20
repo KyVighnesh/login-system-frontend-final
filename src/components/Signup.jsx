@@ -21,6 +21,12 @@ const Create = () => {
 
     axios.post("https://login-backend-final.onrender.com/signup",signUp).then(res=> {
       console.log(res)
+      if(res.data.status == "Success") {
+
+        alert("Signup Completed")
+
+        
+      }
     }).catch(err=> {
       console.log(err)
     })
