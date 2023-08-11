@@ -11,6 +11,7 @@ const Profile = () => {
     const onHandleDelete = (clicked) => {
     axios.put("https://login-backend-final.onrender.com/delete",clicked.link).then(data=> {
       console.log(data)
+      console.log(clicked.link)
     }).catch(err=> {
       console.log(err)
     })
